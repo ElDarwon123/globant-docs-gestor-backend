@@ -30,11 +30,11 @@ export class AdminController {
     // get all the employees by rol
     
     // get one employee and  secretaries by id
-    @Get(':rol/:username')
+    @Get(':rol/:user')
     getEmployee(@Param('user') user: string): Promise<Admin>{
         return this.adminService.getEmployee(user)
     }
-    @Get(':rol/:username')
+    @Get(':rol/:user')
     getSecretary(@Param('user') user: string): Promise<Admin>{
         return this.adminService.getSecretary(user)
     }
@@ -45,12 +45,12 @@ export class AdminController {
         return this.adminService.deleteUser(id)
     }
     //  UPDATE MEHODS
-    @Patch(':rol/:id')
-    updateSecretary(@Param('id', ParseIntPipe) id: number, @Body() sec: updateSecretaryDto){
-        this.adminService.updateSecretary(id, sec)
+    @Patch(':rol/:userSecretaria')
+    updateSecretary(@Param('userSecretaria') userSecretaria: string, @Body() sec: updateSecretaryDto){
+        this.adminService.updateSecretary(userSecretaria, sec)
     }  
-    @Patch(':rol/:id')
-    updateEmployee(@Param('id', ParseIntPipe) id: number, @Body() emp: updateEmployeeDto){
-        this.adminService.updateEmployee(id, emp)
+    @Patch(':rol/:user')
+    updateEmployee(@Param('user') user: string, @Body() emp: updateEmployeeDto){
+        this.adminService.updateEmployee(user, emp)
     }    
 }

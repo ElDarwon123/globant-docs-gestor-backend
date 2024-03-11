@@ -4,6 +4,7 @@ import { SecretariaService } from './secretaria.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Secretaria } from './secretaria.entity';
 import { AdminModule } from 'src/admin/admin.module';
+import { Admin } from '../admin/admin.entity';
 
 @Module({
   imports:[

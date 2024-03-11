@@ -62,12 +62,12 @@ export class AdminService {
     }
     // UPDATE METHODS
     // this service update one secretary by id
-    updateSecretary(id: number, updateSecretary: updateSecretaryDto ){
-        return this.adminRepo.update({id}, updateSecretary)
+    updateSecretary(userSecretaria: string, updateSecretary: updateSecretaryDto ){
+        return this.adminRepo.update({userSecretaria}, updateSecretary)
     }
     // this service update one employee by id
-    updateEmployee(id: number, updateEmployee: updateEmployeeDto){
-        return this.adminRepo.update({id: id}, updateEmployee)
+    updateEmployee(userEmpleado: string, updateEmployee: updateEmployeeDto){
+        return this.adminRepo.update({ userEmpleado }, updateEmployee)
     }
 }
     

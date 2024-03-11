@@ -17,7 +17,7 @@ export class Admin{
     nombreSecretaria: string
     @Column({nullable: true, unique: true})
     userSecretaria: string
-    @Column({nullable: true, unique: true})
+    @Column({nullable: true})
     contrasenaSecretaria: string
     @Column({nullable: true, unique: true})
     identificacionSecretaria: string

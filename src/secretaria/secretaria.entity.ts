@@ -3,26 +3,32 @@ import { Admin } from "src/admin/admin.entity";
 
 @Entity()
 export class Secretaria{
-    @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn()
   id: number;
   @Column()
-  adminId
+  user: string
+  @Column()
+  nombre: string
+  @Column()
+  contrasena: string
+  @Column()
+  numId: string
   @ManyToOne(() => Admin, admin => admin.secretaria)
   admin: Admin;
 
-  @Column()
+  @Column({nullable: true})
   nombreManual: string;
 
-  @Column()
+  @Column({ nullable: true })
   descripcionManual: string;
 
   @Column({ type: 'longblob', nullable: true })
   fileManual: string;
 
-  @Column()
+  @Column({ nullable: true })
   nombreFormato: string;
 
-  @Column()
+  @Column({ nullable: true })
   descripcionFormato: string;
 
   @Column({ type: 'longblob', nullable: true })

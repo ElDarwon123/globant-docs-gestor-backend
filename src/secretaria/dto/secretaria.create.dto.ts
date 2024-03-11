@@ -1,8 +1,8 @@
 export class createManual {
-    adminId: number
     nombreManual: string
     descripcionManual: string
     fileManual: string
+    adminId: string
 }
 export class createFormat {
     nombreFormato: string

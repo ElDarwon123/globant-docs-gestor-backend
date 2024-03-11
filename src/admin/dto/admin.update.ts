@@ -1,7 +1,7 @@
 export class updateSecretaryDto{
     nombreSecretaria?: string
     userSecretaria?: string
-    contraseñaSecretaria?: string
+    contrasenaSecretaria?: string
     identificacionSecretaria?: string
 }
 export class updateEmployeeDto{
